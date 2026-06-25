@@ -1,208 +1,201 @@
-# 💳 FinVault - Modern Digital Banking Platform
-
 <div align="center">
 
-![React](https://img.shields.io/badge/React-19-blue?logo=react)
-![Express](https://img.shields.io/badge/Express.js-Backend-black?logo=express)
-![MongoDB](https://img.shields.io/badge/MongoDB-Database-green?logo=mongodb)
+# 💳 FinVault
+### Enterprise-Level Digital Banking Platform
+
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-20-339933?logo=node.js&logoColor=white)
+![Express](https://img.shields.io/badge/Express.js-Backend-000000?logo=express)
+![MongoDB](https://img.shields.io/badge/MongoDB-Database-47A248?logo=mongodb&logoColor=white)
 ![JWT](https://img.shields.io/badge/JWT-Authentication-orange)
 ![License](https://img.shields.io/badge/License-MIT-blue)
-![Status](https://img.shields.io/badge/Status-Production%20Ready-success)
 
-### Enterprise-Level MERN Banking Application
+A secure, scalable, and modern banking application built using the **MERN Stack**, implementing real-world banking operations including authentication, money transfers, transaction history, and PDF statement generation.
 
-*A secure, scalable, and modern digital banking platform built using the MERN stack, featuring authentication, real-time balance management, money transfers, transaction history, and downloadable PDF statements.*
+</div>
 
 ---
 
-## 🚀 Overview
+# 📑 Table of Contents
 
-FinVault is a full-stack banking application designed with real-world software engineering principles. The project demonstrates secure authentication, database management, RESTful API design, responsive frontend architecture, and clean code organization.
+- Overview
+- Features
+- Technology Stack
+- System Architecture
+- Folder Structure
+- Installation
+- Environment Variables
+- API Endpoints
+- Application Workflow
+- Screenshots
+- Future Improvements
+- Skills Demonstrated
+- Developer
+- License
 
-This project was built to simulate the core functionalities of a modern digital banking system while following industry-standard development practices.
+---
+
+# 🚀 Overview
+
+FinVault is a full-stack banking application developed to simulate the core functionalities of a modern digital banking platform.
+
+The application focuses on:
+
+- Secure Authentication
+- Money Transfers
+- Account Management
+- Transaction History
+- RESTful APIs
+- Responsive UI
+- JWT Security
+- MongoDB Database Integration
+
+This project demonstrates production-level full-stack development practices with clean architecture and scalable code organization.
 
 ---
 
 # ✨ Features
 
-### 🔐 Authentication
+## 🔐 Authentication
 
-* Secure User Registration
-* Secure Login System
-* JWT Authentication
-* Protected API Routes
-* Password Encryption using Bcrypt
-
----
-
-### 💰 Banking Features
-
-* Account Dashboard
-* Account Details
-* Current Balance
-* Secure Money Transfer
-* Transaction History
-* PDF Statement Download
-* Balance Validation
-* Receiver Verification
-* Instant Balance Updates
+- User Registration
+- Secure Login
+- JWT Authentication
+- Password Hashing using Bcrypt
+- Protected Routes
 
 ---
 
-### 🎨 User Experience
+## 💰 Banking
 
-* Responsive Design
-* Modern UI
-* Smooth Animations
-* Clean Dashboard
-* Professional Layout
-* Mobile Friendly
-
----
-
-### ⚙ Backend Features
-
-* REST API
-* MongoDB Database
-* Express Server
-* JWT Middleware
-* Error Handling
-* Modular MVC Architecture
+- View Account Details
+- Check Balance
+- Transfer Money
+- Real-Time Balance Updates
+- Receiver Validation
+- Transaction History
+- PDF Statement Download
 
 ---
 
-# 🛠 Tech Stack
+## 🎨 Frontend
 
-| Frontend     | Backend    | Database            | Authentication   |
-| ------------ | ---------- | ------------------- | ---------------- |
-| React 19     | Express.js | MongoDB             | JWT              |
-| Tailwind CSS | Node.js    | Mongoose            | Bcrypt           |
-| Axios        | REST API   | MongoDB Atlas Ready | Protected Routes |
+- Responsive Design
+- Modern Dashboard
+- Clean UI
+- Mobile Friendly
+- Component-Based Architecture
 
 ---
 
-# 📂 Project Structure
+## ⚙ Backend
 
+- REST API
+- Express Server
+- MongoDB Database
+- MVC Architecture
+- Authentication Middleware
+- Error Handling
+
+---
+
+# 🛠 Technology Stack
+
+| Category | Technologies |
+|----------|--------------|
+| Frontend | React, Tailwind CSS, Axios |
+| Backend | Node.js, Express.js |
+| Database | MongoDB, Mongoose |
+| Authentication | JWT, Bcrypt |
+| Tools | Git, GitHub, VS Code |
+
+---
+
+# 🏗 System Architecture
+
+```text
+              User
+                │
+                ▼
+        React Frontend
+                │
+        Axios HTTP Requests
+                │
+                ▼
+        Express REST API
+                │
+      JWT Authentication
+                │
+                ▼
+          MongoDB Database
+                │
+                ▼
+      Response to Frontend
 ```
-FinVault/
 
-├── frontend/
+---
+
+# 📁 Folder Structure
+
+```text
+FinVault
 │
-│   ├── src/
+├── frontend
+│   ├── src
+│   │   ├── assets
+│   │   ├── components
+│   │   ├── pages
+│   │   ├── services
+│   │   ├── App.jsx
+│   │   └── main.jsx
 │   │
-│   ├── components/
-│   ├── pages/
-│   ├── assets/
-│   ├── services/
-│   ├── App.jsx
-│   └── main.jsx
+│   └── package.json
 │
-└── backend/
-    │
-    ├── config/
-    ├── controllers/
-    ├── middleware/
-    ├── models/
-    ├── server.js
-    └── package.json
+├── backend
+│   ├── config
+│   ├── controllers
+│   ├── middleware
+│   ├── models
+│   ├── routes
+│   ├── server.js
+│   └── package.json
+│
+└── README.md
 ```
 
 ---
 
-# 🔄 Application Workflow
-
-```
-User
-   │
-   ▼
-
-React Frontend
-
-   │
-Axios Requests
-
-   ▼
-
-Express REST API
-
-   │
-
-JWT Authentication
-
-   ▼
-
-MongoDB Database
-
-   │
-
-Response
-
-   ▼
-
-Updated Dashboard
-```
-
----
-
-# 🔒 Security
-
-✔ JWT Authentication
-
-✔ Password Hashing using Bcrypt
-
-✔ Protected API Routes
-
-✔ Authentication Middleware
-
-✔ Secure REST Architecture
-
----
-
-# 📦 Installation
+# ⚙ Installation
 
 ## Clone Repository
 
 ```bash
-git clone https://github.com/your-username/finvault.git
-```
+git clone https://github.com/yourusername/FinVault.git
 
-```
-cd finvault
+cd FinVault
 ```
 
 ---
 
-## Install Backend
+## Backend Setup
 
 ```bash
 cd backend
+
 npm install
-```
 
-Run Backend
-
-```bash
-npm start
-```
-
-or
-
-```bash
-nodemon server.js
+npm run dev
 ```
 
 ---
 
-## Install Frontend
+## Frontend Setup
 
 ```bash
 cd frontend
+
 npm install
-```
 
-Run Frontend
-
-```bash
 npm run dev
 ```
 
@@ -210,109 +203,153 @@ npm run dev
 
 # 🔑 Environment Variables
 
-Create a `.env` file inside the backend folder.
+Create a `.env` file inside the backend directory.
 
 ```env
 PORT=5001
 
-MONGO_URI=YOUR_MONGODB_URI
+MONGO_URI=YOUR_MONGODB_CONNECTION_STRING
 
 JWT_SECRET=YOUR_SECRET_KEY
 ```
 
 ---
 
-# 📡 REST API
+# 📡 REST API Endpoints
 
 ## Authentication
 
-```
-POST /signup
-
-POST /login
-```
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /signup | Register User |
+| POST | /login | Login User |
 
 ---
 
 ## Account
 
-```
-GET /account/:accountNumber
-
-GET /balance/:accountNumber
-```
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| GET | /account/:accountNumber | Account Details |
+| GET | /balance/:accountNumber | Current Balance |
 
 ---
 
 ## Transactions
 
-```
-POST /transfer
+| Method | Endpoint | Description |
+|---------|----------|-------------|
+| POST | /transfer | Transfer Money |
+
+---
+
+# 🔄 Application Workflow
+
+```text
+Register User
+      │
+      ▼
+Login
+      │
+      ▼
+Generate JWT Token
+      │
+      ▼
+Dashboard
+      │
+      ├── View Balance
+      ├── View Account
+      ├── Transfer Money
+      └── Transaction History
+               │
+               ▼
+        MongoDB Updated
 ```
 
 ---
 
 # 📸 Screenshots
 
-> Add these screenshots before uploading to GitHub.
+> Replace these with screenshots of your application.
 
-* Login Page
-* Register Page
-* Dashboard
-* Transfer Money
-* Transaction History
-* PDF Statement
-* Responsive Mobile View
+- Login Page
+- Register Page
+- Dashboard
+- Transfer Money
+- Transaction History
+- PDF Statement
+- Mobile View
+
+Example:
+
+```
+screenshots/
+
+login.png
+
+dashboard.png
+
+transfer.png
+
+history.png
+```
+
+---
+
+# 🔒 Security Features
+
+- JWT Authentication
+- Password Encryption
+- Protected Routes
+- Secure REST APIs
+- Authentication Middleware
+- Server-side Validation
 
 ---
 
 # 📈 Future Improvements
 
-* Email Notifications
-* Two-Factor Authentication
-* UPI Payments
-* QR Code Payments
-* Admin Dashboard
-* Spending Analytics
-* Budget Planner
-* Investment Module
-* AI Financial Assistant
-* Dark Mode
+- Two-Factor Authentication
+- UPI Payments
+- QR Code Payments
+- Email Notifications
+- Admin Dashboard
+- Budget Analytics
+- AI Financial Assistant
+- Investment Tracking
+- Dark Mode
 
 ---
 
-# 🧪 Testing Checklist
+# 🧠 Skills Demonstrated
 
-* User Registration
-* User Login
-* JWT Validation
-* Money Transfer
-* Balance Update
-* Transaction History
-* Invalid Credentials
-* Unauthorized Access
-* PDF Download
-
----
-
-# 💡 Software Engineering Principles
-
-* Modular Architecture
-* MVC Pattern
-* Component-Based Design
-* RESTful API Design
-* Clean Code
-* Separation of Concerns
-* Reusable Components
-* Secure Authentication
-* Responsive UI
-* Scalable Folder Structure
+- Full Stack Development
+- REST API Development
+- Authentication & Authorization
+- MongoDB Database Design
+- React Component Architecture
+- Express Middleware
+- Secure Password Handling
+- JWT Authentication
+- MVC Design Pattern
+- Responsive Web Design
+- Git & GitHub
+- Clean Code Principles
 
 ---
 
-# 🌟 Why This Project?
+# 📚 Learning Outcomes
 
-This project demonstrates practical full-stack engineering skills beyond CRUD applications by integrating authentication, secure transactions, database management, REST APIs, modular architecture, and a polished user experience. It reflects the type of application structure commonly used in production-grade web systems.
+This project demonstrates practical knowledge of:
+
+- Frontend Development
+- Backend Development
+- Database Management
+- API Integration
+- Authentication
+- State Management
+- Software Architecture
+- Real-world Banking Logic
 
 ---
 
@@ -322,17 +359,25 @@ This project demonstrates practical full-stack engineering skills beyond CRUD ap
 
 B.Tech Information Technology
 
-Passionate Full Stack Developer focused on building scalable and user-centric web applications.
+Passionate Full Stack Developer focused on building scalable and secure web applications.
+
+📧 Email: your-email@example.com
+
+💼 LinkedIn: https://linkedin.com/in/your-profile
+
+🐙 GitHub: https://github.com/yourusername
 
 ---
 
-# ⭐ If you found this project helpful
+# ⭐ Support
 
-Give this repository a ⭐ and feel free to contribute!
+If you found this project useful, consider giving it a **Star ⭐**.
+
+It helps others discover the project and motivates future improvements.
 
 ---
 
-## 📜 License
+# 📄 License
 
 This project is licensed under the MIT License.
 
@@ -340,6 +385,8 @@ This project is licensed under the MIT License.
 
 <div align="center">
 
-### ⭐ Designed & Developed with ❤️ by K. Ranjith
+### ⭐ Built with React • Node.js • Express • MongoDB
+
+**Designed & Developed by K. Ranjith**
 
 </div>
