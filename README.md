@@ -361,12 +361,11 @@ B.Tech Information Technology
 
 Passionate Full Stack Developer focused on building scalable and secure web applications.
 
-📧 Email: your-email@example.com
+📧 Email: ranjithk160106@gmail.com
 
-💼 LinkedIn: https://linkedin.com/in/your-profile
+💼 LinkedIn: https://www.linkedin.com/in/ranjith-k-150833395/
 
-🐙 GitHub: https://github.com/yourusername
-
+🐙 GitHub: https://github.com/Ranjith-kumaravel
 ---
 
 # ⭐ Support
