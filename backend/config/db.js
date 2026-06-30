@@ -11,4 +11,8 @@ const connectDB = async () => {
   }
 };
 
+<<<<<<< HEAD
 module.exports = connectDB;
+=======
+module.exports = connectDB;
+>>>>>>> 72013941db107fbe5324f851cececbb36dff5b68
