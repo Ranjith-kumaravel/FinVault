@@ -6,16 +6,27 @@ function Login({ setUser, setShowLogin }) {
   const [pin, setPin] = useState("");
 
   const handleLogin = async (e) => {
-    e.preventDefault();
+  e.preventDefault();
 
-    try {
-      const response = await login(accountNumber, pin);
-      setUser(response.data);
-    } catch (error) {
-      alert("Invalid Account Number or PIN");
-      console.error(error);
-    }
-  };
+  try {
+    const response = await login(accountNumber, pin);
+
+    localStorage.setItem(
+  "token",
+  response.data.token
+);
+
+localStorage.setItem(
+  "user",
+  JSON.stringify(response.data.user)
+);
+
+setUser(response.data.user);
+  } catch (error) {
+    alert("Invalid Account Number or PIN");
+    console.error(error);
+  }
+};
 
   return (
     <div className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-900 flex items-center justify-center px-4 overflow-hidden relative">

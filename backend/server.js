@@ -1,9 +1,15 @@
+const bcrypt = require("bcrypt");
 const express = require("express");
 const mongoose = require("mongoose");
 const cors = require("cors");
 require("dotenv").config();
 
+const connectDB = require("./config/db");
+const auth = require("./middleware/auth");
+
 const app = express();
+
+connectDB();
 
 const Account = require("./models/Account");
 
@@ -18,20 +24,8 @@ const {
   deposit,
   withdraw,
   getAccount,
+  transferMoney,
 } = require("./controllers/atmcontroller");
-
-// MongoDB Connection
-mongoose
-  .connect(
-    "mongodb://ranjithk160106_db_user:Ranjith123@ac-ehru1ew-shard-00-00.6djcofj.mongodb.net:27017,ac-ehru1ew-shard-00-01.6djcofj.mongodb.net:27017,ac-ehru1ew-shard-00-02.6djcofj.mongodb.net:27017/atmdb?ssl=true&replicaSet=atlas-fplj86-shard-0&authSource=admin&retryWrites=true&w=majority"
-  )
-  .then(() => {
-    console.log("MongoDB Connected");
-  })
-  .catch((err) => {
-    console.error("MongoDB Connection Error");
-    console.error(err.message);
-  });
 
 // Debug middleware
 app.use((req, res, next) => {
@@ -41,21 +35,22 @@ app.use((req, res, next) => {
 
 // Routes
 app.post("/signup", signup);
-
 app.post("/login", login);
 
 app.get(
   "/balance/:accountNumber",
+  auth,
   checkBalance
 );
 
-app.post("/deposit", deposit);
-
-app.post("/withdraw", withdraw);
+app.post("/deposit", auth, deposit);
+app.post("/withdraw", auth, withdraw);
+app.post("/transfer", auth, transferMoney);
 
 // Get Full Account Details
 app.get(
   "/account/:accountNumber",
+  auth,
   async (req, res) => {
     try {
       const account =
@@ -70,7 +65,15 @@ app.get(
         });
       }
 
-      res.json(account);
+      res.json({
+        id: account._id,
+        name: account.name,
+        accountNumber:
+          account.accountNumber,
+        balance: account.balance,
+        transactions:
+          account.transactions,
+      });
     } catch (error) {
       res.status(500).json({
         message: error.message,
@@ -79,10 +82,32 @@ app.get(
   }
 );
 
-// OR use controller version
-// app.get("/account/:accountNumber", getAccount);
+app.get(
+  "/history/:accountNumber",
+  auth,
+  async (req, res) => {
+    try {
+      const account =
+        await Account.findOne({
+          accountNumber:
+            req.params.accountNumber,
+        });
 
-// Server
+      if (!account) {
+        return res.status(404).json({
+          message: "Account not found",
+        });
+      }
+
+      res.json(account.transactions);
+    } catch (error) {
+      res.status(500).json({
+        message: error.message,
+      });
+    }
+  }
+);
+
 const PORT = process.env.PORT || 5000;
 
 app.listen(PORT, () => {

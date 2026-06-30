@@ -6,12 +6,21 @@ import Signup from "./pages/Signup";
 import Dashboard from "./pages/Dashboard";
 
 function App() {
-  const [user, setUser] = useState(null);
+  const [user, setUser] = useState(() => {
+  const savedUser =
+    localStorage.getItem("user");
+
+  return savedUser
+    ? JSON.parse(savedUser)
+    : null;
+});
   const [showLogin, setShowLogin] = useState(true);
 
   const handleLogout = () => {
-    setUser(null);
-  };
+  localStorage.removeItem("token");
+  localStorage.removeItem("user");
+  setUser(null);
+};
 
   if (user) {
     return (
