@@ -2,7 +2,7 @@ import axios from "axios";
 
 // const API = "http://localhost:5001";
 
-const API = "http://localhost:5001";
+const API = "https://finvault-backend-8r6z.onrender.com";
 
 export const signup = (data) => {
   return axios.post(`${API}/signup`, data);
