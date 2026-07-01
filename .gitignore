@@ -1,6 +1,5 @@
-<<<<<<< HEAD
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
@@ -8,42 +7,12 @@ yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
 
-node_modules
-dist
-dist-ssr
-*.local
-
-# Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
-*.suo
-*.ntvs*
-*.njsproj
-*.sln
-*.sw?
-
-
-
-
-
-
-
-
-
-
-=======
->>>>>>> 72013941db107fbe5324f851cececbb36dff5b68
 # Dependencies
 node_modules/
-npm-debug.log*
-yarn-debug.log*
-yarn-error.log*
-pnpm-debug.log*
 
 # Build files
 dist/
+dist-ssr
 build/
 out/
 
@@ -53,10 +22,6 @@ out/
 .env.development.local
 .env.test.local
 .env.production.local
-
-# Logs
-logs/
-*.log
 
 # Coverage reports
 coverage/
@@ -75,7 +40,7 @@ vite.config.ts.timestamp-*
 # React Native
 .expo/
 
-# IDE files
+# IDE
 .vscode/
 .idea/
 *.swp
@@ -105,19 +70,15 @@ pids/
 *.bak
 *.orig
 
-# Backend uploads (if applicable)
+# Backend uploads
 uploads/
 public/uploads/
 
-# Database files (if applicable)
+# Database files
 *.sqlite
 *.sqlite3
 
-# Package lock files (Optional - usually commit these)
+# Lock files (optional)
 # package-lock.json
 # yarn.lock
-<<<<<<< HEAD
 # pnpm-lock.yaml
-=======
-# pnpm-lock.yaml
->>>>>>> 72013941db107fbe5324f851cececbb36dff5b68
