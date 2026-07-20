@@ -33,7 +33,7 @@ function Login({ setUser, setShowLogin }) {
 
       {/* Login Card */}
       <div className="relative z-10 w-full max-w-md backdrop-blur-xl bg-white/10 border border-white/20 rounded-3xl shadow-2xl p-8">
-        <h1 className="text-4xl font-bold text-center text-white mb-2">
+        <h1 className="text-3xl md:text-4xl font-bold text-center text-white mb-2">
           FinVault
         </h1>
 

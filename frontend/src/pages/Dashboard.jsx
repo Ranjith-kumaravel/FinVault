@@ -551,7 +551,7 @@ const downloadStatement = () => {
                     Available Balance
                   </p>
 
-                  <h2 className="text-6xl font-bold mt-4">
+                  <h2 className="text-3xl sm:text-4xl md:text-6xl font-bold mt-4 break-words">
                     ₹{displayBalance}
                   </h2>
 
@@ -610,7 +610,7 @@ const downloadStatement = () => {
               </div>
             </div>
 
-            <div className="mt-10 grid md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
               <motion.div
                 whileHover={{
                   scale: 1.05,
@@ -670,7 +670,7 @@ const downloadStatement = () => {
               className="w-full p-4 rounded-xl bg-white/10 border border-white/20 mb-4"
             />
 
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
               <button
                 onClick={handleDeposit}
                 className="bg-green-500 hover:bg-green-600 py-4 rounded-xl"
@@ -1026,7 +1026,7 @@ const downloadStatement = () => {
                       </p>
                     </div>
 
-                    <div className="grid grid-cols-2 gap-4 mt-8">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 mt-8">
                       <button
                         onClick={() =>
                           setShowTransferConfirm(
@@ -1671,8 +1671,10 @@ const downloadStatement = () => {
   //console.log("History State:", history);
 
   return (
-    <div className="flex min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-900 text-white">
-      <Sidebar
+    /*<div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-900 text-white">
+      */
+      <div className="flex flex-col md:flex-row min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-indigo-900 text-white">
+        <Sidebar
         activePage={activePage}
         setActivePage={setActivePage}
         onLogout={onLogout}
@@ -1680,7 +1682,7 @@ const downloadStatement = () => {
         profileImage={profileImage}
       />
 
-      <main className="flex-1 p-8 overflow-auto">
+      <main className="flex-1 p-4 sm:p-6 md:p-8 overflow-x-hidden">
         {renderContent()}
       </main>
     </div>

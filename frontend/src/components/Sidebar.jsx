@@ -49,8 +49,8 @@ export default function Sidebar({
   ];
 
   return (
-    <aside className="w-72 min-h-screen backdrop-blur-xl bg-white/10 border-r border-white/20 text-white flex flex-col p-6">
-      {/* Logo + Profile */}
+    <aside className="w-full md:w-72 min-h-screen backdrop-blur-xl bg-white/10 border-r border-white/20 text-white flex flex-col p-6">
+   {/* Logo + Profile */}
       <div className="flex flex-col items-center mb-10">
         <div className="relative">
           {/* Glow Effect */}
@@ -63,7 +63,7 @@ export default function Sidebar({
               className="relative w-24 h-24 rounded-full border-4 border-cyan-400 object-cover shadow-[0_0_25px_rgba(34,211,238,0.5)]"
             />
           ) : (
-            <div className="relative w-24 h-24 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-4xl font-bold border-4 border-cyan-400 shadow-[0_0_25px_rgba(34,211,238,0.5)]">
+            <div className="relative w-24 h-24 rounded-full bg-gradient-to-r from-cyan-500 to-blue-600 flex items-center justify-center text-2xl md:text-4xl font-bold border-4 border-cyan-400 shadow-[0_0_25px_rgba(34,211,238,0.5)]">
               {user?.name?.charAt(0)?.toUpperCase()}
             </div>
           )}
@@ -72,7 +72,7 @@ export default function Sidebar({
           <div className="absolute bottom-1 right-1 w-5 h-5 bg-green-500 rounded-full border-2 border-slate-900"></div>
         </div>
 
-        <h1 className="text-4xl font-extrabold mt-5 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
+        <h1 className="text-2xl md:text-4xl font-extrabold mt-5 bg-gradient-to-r from-cyan-400 to-blue-400 bg-clip-text text-transparent">
           FinVault
         </h1>
 
